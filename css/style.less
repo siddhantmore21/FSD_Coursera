@@ -1,21 +1,18 @@
 @lt-gray: #ddd;
-@bg-dark: #512DA8;
-@bg-light: #9575CD;
-@bg-pale: #D1C4E9;
+@background-dark: #512DA8;
+@background-light: #9575CD;
+@background-pale: #D1C4E9;
 
-//Height Variables
-
+// Height variables
 @carousel-item-height: 300px;
 
-
 //Mixins
-
-.zero-margin(@pad-up-dn:0px, @pad-lf-rt: 0px){
-    margin:0px auto;
-    padding: @pad-up-dn @pad-lf-rt;
+.zero-margin (@pad-up-dn: 0px, @pad-left-right: 0px) {
+	margin:0px auto;
+	padding: @pad-up-dn @pad-left-right;
 }
 
-//css
+//Implementation
 .row-header{
     .zero-margin();
 }
@@ -27,13 +24,13 @@
 }
 
 .footer{
-    background-color: @bg-pale;
+    background-color: @background-pale;
     .zero-margin(20px, 0px);
 }
 
 .jumbotron {
     .zero-margin(70px,30px);
-    background: @bg-light ;
+    background: @background-light ;
     color:floralwhite;
 }
 
@@ -49,7 +46,7 @@ body{
 }
 
 .navbar-dark {
-     background-color: @bg-dark;
+     background-color: @background-dark;
 }
 
 .tab-content {
@@ -59,15 +56,15 @@ body{
     padding: 10px;
 }
 
+
 //Nesting
 
-.carousel{
-    background: @bg-dark;
+.carousel {
+    background:@background-dark;
 
-    .carousel-item{
+    .carousel-item {
         height: @carousel-item-height;
-
-        img{
+        img {
             position: absolute;
             top: 0;
             left: 0;
@@ -76,8 +73,9 @@ body{
     }
 }
 
-#carouselButton{
-    right: 0px;
+#carouselButton {
+    right:0px;
     position: absolute;
     bottom: 0px;
+    z-index: 1;
 }

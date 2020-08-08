@@ -11,24 +11,14 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Ristorante Con Fusion</title>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    
-    <script>
-        $(document).ready(function(){
-        $("#reservetablebtn").click(function(){
-        $('html,body').animate({
-        scrollTop: $("#reservetableform").offset().top},
-        'slow');
-        });
-       
 
-       
-        
-        });
-    </script>
+    
+    
+  
     
      
 </head>
@@ -48,7 +38,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginmodal" style="cursor: pointer;">
+                    <a  style="cursor: pointer;" id="loginatag">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -107,8 +97,7 @@
                     
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <button class="btn btn-block btn-lg btn-warning" type="button" id="reservetablebtn"
-                    data-toggle="modal" data-target="#reservetablemodal">
+                    <button class="btn btn-block btn-lg btn-warning" type="button" id="reservetablebtn">
                     Reserve Table</button>
                 </div>
             </div>
@@ -371,9 +360,19 @@
                         $('#carouselButton').addClass('btn-danger');
                     }
                    
-                
+                    
                 
                 });
+                $('#loginatag').click(function(){
+                    $('#loginmodal').modal('show');
+                });
+
+                $('#reservetablebtn').click(function(){
+                    $('#reservetablemodal').modal('show');
+                });
+
+
+                
                 
 
          });
